@@ -7,7 +7,7 @@
 # To get a newer version, you will need to update the SHA.
 # You can also reference a tag or branch, but the action may change without warning.
 
-name: Label issues
+name: New Issue 
 on:
   issues:
     types:
@@ -18,8 +18,8 @@ jobs:
     permissions:
       issues: write
     steps:
-      - name: Label issues
-        uses: andymckay/labeler@e6c4322d0397f3240f0e7e30a33b5c5df2d39e90
+      - name: New Issue 
+        uses: andymckay/labeler@master
         with:
-          add-labels: "bug"
+          add-labels: "needs label"
           repo-token: ${{ secrets.GITHUB_TOKEN }}
